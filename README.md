@@ -21,7 +21,7 @@
 
 ## 它怎么干活
 
-<p align="center"><img src="docs/images/workflow.svg" width="860" alt="工作日记、去重核对、点线面月报流程"></p>
+<p align="center"><img src="docs/images/workflow.png" width="860" alt="工作日记、去重核对、点线面月报流程"></p>
 
 ```text
 你：今天修复了设备列表重复显示，筛选和刷新都回归通过。
