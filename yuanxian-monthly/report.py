@@ -14,6 +14,7 @@ from book import COLS, PARTS, generate, read, shift, title
 from ledger import apply, import_previous, layout, require, review
 from mail_report import digest, process
 from compact import prepare
+from sales import prepare_sales
 from diary import update as update_diary
 
 BASE=Path(__file__).resolve().parent
@@ -143,7 +144,7 @@ def run(root,req):
 
 def monthly(req,person,person_dir):
     action=req["action"]
-    actions=("show","batch","record","edit","undo","plans","display","sync","final","preview","send","reconcile")
+    actions=("show","batch","sales_daily","record","edit","undo","plans","display","sync","final","preview","send","reconcile")
     require(action in actions,"未知操作")
     month=req["month"]
     require(re.fullmatch(r"[0-9]{4}-(0[1-9]|1[0-2])",month),"年月格式应为 YYYY-MM")
@@ -174,7 +175,9 @@ def monthly(req,person,person_dir):
     if action=="record" and ("source_file" in req or "source_text" in req):
         source=Path(req["source_file"]).read_bytes() if "source_file" in req else req["source_text"].encode("utf-8")
         receipt=digest(source)
-    if action=="batch":
+    if action=="sales_daily":
+        changes=prepare_sales(state,req,month,person)
+    elif action=="batch":
         changes=prepare(state,req,month)
     elif receipt and receipt in state.get("imports",{}):
         changes=[{"已导入同一份笔记":state["imports"][receipt]}]
