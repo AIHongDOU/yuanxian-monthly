@@ -1,0 +1,4 @@
+interface:
+  display_name: "源显公司月报"
+  short_description: "通过菜单记录工作、整理日记与笔记、生成月报草稿并核对定稿"
+  default_prompt: "$yuanxian-monthly 菜单"

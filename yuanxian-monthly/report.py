@@ -98,6 +98,15 @@ def merge(draft,month,state,layouts,person):
                 target["cells"][col]=v
 
 def run(root,req):
+    if req["action"] in ("menu","菜单"):
+        options=get(BASE/"menu.json")
+        choice=req.get("choice")
+        if choice is None:
+            return options
+        for option in options:
+            if str(choice).strip() in (str(option["id"]),option["label"]):
+                return option
+        raise ValueError("请从菜单选择一个编号或名称")
     data=root.resolve()/"月报数据"
     data.mkdir(parents=True,exist_ok=True)
     if req["action"] in ("diary","diary_show"):

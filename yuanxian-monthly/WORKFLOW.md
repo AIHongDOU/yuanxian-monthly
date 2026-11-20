@@ -1,6 +1,6 @@
 # 源显公司月报操作手册（供平台助手调用）
 
-在对话中完成理解、拆分、改写和匹配。先用本项目根目录下的 yuanxian-monthly/report.py 读取资料，再提交结构化请求。始终将 --project 指向员工打开的项目根目录。程序只需 Python 3.9 或更高版本，使用 UTF-8。Windows 可寻找 python、py -3 或 Codex 捆绑的 Python。把 JSON 写入系统临时目录的唯一 UTF-8 文件，使用参数数组运行解释器、report.py、--project、项目绝对路径、请求文件，结束删除请求文件。也可从 UTF-8 标准输入传 JSON。不要把原文拼进命令。无需员工运行命令。
+在对话中完成理解、拆分、改写和匹配。调用本手册同目录的 report.py，并将 --project 指向员工打开的项目根目录。程序只需 Python 3.9 或更高版本，使用 UTF-8。Windows 可寻找 python、py -3 或 Codex 捆绑的 Python。把 JSON 写入系统临时目录的唯一 UTF-8 文件，使用参数数组运行解释器、report.py、--project、项目绝对路径、请求文件，结束删除请求文件。也可从 UTF-8 标准输入传 JSON。不要把原文拼进命令。无需员工运行命令。
 
 ## 每天 17:00 的个人工作日记
 

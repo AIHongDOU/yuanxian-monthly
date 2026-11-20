@@ -56,6 +56,16 @@ flowchart LR
 
 ## 快速开始
 
+在员工平时存放月报的工作区打开智能体，将下面一行粘贴进对话，让它执行安装。电脑需要 Git、Node.js（含 npx）和本仓库的读取权限。
+
+```sh
+npx --yes skills@1.9.0 add https://github.com/AIHongDOU/yuanxian-monthly/tree/main/yuanxian-monthly -a codex trae codebuddy --copy -y
+```
+
+安装后在该工作区新开对话，选择 **yuanxian-monthly（源显公司月报）** 并输入 **菜单**。支持 @ 技能的客户端可输入 `@yuanxian-monthly 菜单`；Codex 可用 `$yuanxian-monthly 菜单`，WorkBuddy 也可在对话框的技能列表选取。直接导入可下载[完整技能 ZIP](dist/yuanxian-monthly.zip?raw=1)。
+
+菜单里选 **1 记一件事**，再补一句“今天完成了设备回归测试”；也可以一次发送 **1 今天完成了设备回归测试**。有可选回复的客户端可以点选，其余直接回复编号即可。
+
 在支持本地文件和 Python 的智能体中打开本项目，然后直接说：
 
 > 使用源显月报。今天完成了设备管理系统的筛选功能回归，结果通过。
