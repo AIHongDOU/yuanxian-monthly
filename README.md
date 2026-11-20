@@ -2,7 +2,9 @@
 
 <p align="center"><em>把零散工作记成可追溯的日记，再整理成点、线、面月报。</em></p>
 
-<p align="center"><img src="docs/images/workflow.svg" width="860" alt="工作日记、去重核对、点线面月报流程"></p>
+<p align="center">
+  <a href="https://github.com/AIHongDOU"><img src="https://avatars.githubusercontent.com/u/314199668?v=4&amp;s=120" width="96" height="96" alt="AIHongDOU 的 GitHub 头像"></a>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Codex-Skill-2f81f7?style=flat-square" alt="Codex Skill">
@@ -18,6 +20,8 @@
 这个技能把每件工作先保存到本地台账。日记保留日期、来源和状态；月末再按**点、线、面**整理，每类最多五项，并用模板生成 Excel 草稿。你可以核对、修改、定稿，发送邮件前还会看到收件人和附件预览。
 
 ## 它怎么干活
+
+<p align="center"><img src="docs/images/workflow.svg" width="860" alt="工作日记、去重核对、点线面月报流程"></p>
 
 ```text
 你：今天修复了设备列表重复显示，筛选和刷新都回归通过。
@@ -42,7 +46,7 @@ flowchart LR
 | 场景 | 结果 |
 | --- | --- |
 | 每天记一件事 | 保存原话、日期、来源、分类、结果和待办，可随时修正 |
-| Codex 工作日记 | 在具备跨对话读取与定时能力的桌面环境中，按实际工作对话生成可复制的日报正文 |
+| 个人工作日记 | Codex 可汇总本人工作对话；WorkBuddy 可定时整理指定工作区内的本人笔记和对话导出，生成可复制的日报正文 |
 | 整理整月笔记 | 合并重复进展，按点、线、面形成总结，原始明细留在台账 |
 | 生成月报 | 使用仓库内的 Excel 模板输出草稿，每类最多五项 |
 | 核对与定稿 | 提示缺实绩、缺依据、待核分类和疑似重复；保留草稿与定稿 |
@@ -61,6 +65,8 @@ flowchart LR
 > 用这个月的工作日记生成我的月报，先给我草稿和核对清单。
 
 如果要启用 Codex 个人工作日记，可在专属对话中要求每天北京时间 17:00 汇总**本人在本机 Codex 的工作对话**。定时任务需要在桌面端配置；钉钉内容由员工自行上传。
+
+在 WorkBuddy 中，可新建每天北京时间 17:00 执行的定时任务，选择本项目作为工作区。提示词可以写成“使用源显月报，从我指定的工作笔记目录整理今天的个人工作日记，标明来源，写入我的固定日记文件”。如需纳入 Codex 对话，可将对话导出放在该目录中，也可直接复用 Codex 已生成的工作日记 TXT 整理月报。[WorkBuddy 自动化说明](https://intl.cloud.tencent.com/zh/document/product/1316/84500)
 
 ## 安装
 
